@@ -1,8 +1,7 @@
-import Painting from "./Painting";
-import paintings from "../data/paintings.json";
+import Painting from './Painting';
+import paintings from '../data/paintings.json';
 
-
-function App() {
+export const App = () => {
   return (
     <div>
       <Painting
@@ -36,22 +35,21 @@ function App() {
       />
     </div>
   );
-}
-
-
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
 };
+
+// export const App = () => {
+//   return (
+//     <div
+//       style={{
+//         height: '100vh',
+//         display: 'flex',
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//         fontSize: 40,
+//         color: '#010101'
+//       }}
+//     >
+//       React homework template
+//     </div>
+//   );
+// };
