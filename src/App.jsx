@@ -9,9 +9,7 @@ export const App = () => {
     <div>
       <Section title="Module 1 ">
         <PaintingList paintings={paintings} />
-
         <IsOnline />
-
         <ElCollectionMap />
       </Section>
     </div>
