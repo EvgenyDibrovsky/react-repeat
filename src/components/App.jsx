@@ -1,4 +1,5 @@
 import Painting from './Painting';
+import Select from './Select';
 import paintings from '../data/paintings.json';
 
 export const App = () => {
@@ -37,6 +38,8 @@ export const App = () => {
         price={paintings[3].price}
         quantity={paintings[3].quantity}
       />
+      <h2>Условие рендера</h2>
+      <Select />
     </div>
   );
 };
