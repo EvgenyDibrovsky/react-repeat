@@ -8,7 +8,7 @@ import ColorPicker from 'module1/components/ColorPcker/ColorPicker';
 const ModuleOne = () => {
   return (
     <div>
-      <Section title="Module 1 ">
+      <Section title="Module - 1">
         <PaintingList paintings={paintings} />
         <IsOnline />
         <ElCollectionMap />
