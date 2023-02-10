@@ -1,5 +1,5 @@
-const Section = props => {
-  return <div>{props.title && <h3>{props.title}</h3>}</div>;
+const Section = ({title, children}) => {
+  return <div>{title && <h3>{title}</h3>} {children}</div>;
 };
 
 export default Section;

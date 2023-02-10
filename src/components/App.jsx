@@ -7,12 +7,15 @@ import Section from './Section';
 export const App = () => {
   return (
     <div>
-      <Section title="1" />
+      <Section title="1" >
       <PaintingList paintings={paintings} />
-      <Section title="2" />
+      </Section>
+      <Section title="2" >
       <IsOnline />
-      <Section title="3" />
+      </Section>
+      <Section title="3" >
       <ElCollectionMap />
+      </Section>
     </div>
   );
 };
