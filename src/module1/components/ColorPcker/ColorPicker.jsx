@@ -1,10 +1,12 @@
 // import css from './ColorPicker.css';
-const ColorPicker = () => {
+const ColorPicker = options => {
   return (
     <div className="ColorPicker">
       <h2 className="ColorPicker__title">ColorPicker</h2>
       <div>
-        <span className="ColorPicker__option"></span>
+        {options.map(option => 
+          <span className="ColorPicker__option">{option.label}</span>
+        )}
       </div>
     </div>
   );
