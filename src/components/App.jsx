@@ -1,5 +1,6 @@
 import Painting from './Painting';
-import Select from './Select';
+import IsOnline from './IsOnline';
+import MethodMap from './MethodMap';
 import paintings from '../data/paintings.json';
 
 export const App = () => {
@@ -40,7 +41,9 @@ export const App = () => {
         quantity={paintings[3].quantity}
       />
       <h3>№2</h3>
-      <Select />
+      <IsOnline />
+      <h3>№3</h3>
+      <MethodMap />
     </div>
   );
 };

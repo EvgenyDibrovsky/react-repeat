@@ -17,7 +17,7 @@ const Painting = ({
         Автор: <a href={profileUrl}>{author}</a>
       </p>
       <p>Цена: {price} кредитов</p>
-      <p>Доступность: {quantity} заканчиавется или есть в наличии</p>
+      <p>Доступность: {quantity < 10 ? 'заканчиавется' : 'есть в наличии'} </p>
       <button type="button">Добавить в корзину</button>
     </div>
   );
