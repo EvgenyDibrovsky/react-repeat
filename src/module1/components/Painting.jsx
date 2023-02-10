@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import defaulImage from './default-image.jpg';
+import defaulImage from '../../assets/image/default-image.jpg';
 
 const Painting = ({
   imageUrl = defaulImage,
