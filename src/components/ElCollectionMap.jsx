@@ -1,3 +1,6 @@
+import PropTypes from 'prop-types';
+
+
 const ElCollectionMap = () => {
   return (
     <div>
@@ -12,5 +15,8 @@ const ElCollectionMap = () => {
     </div>
   );
 };
-
+ElCollectionMap.prototypes = {
+  children: PropTypes.node,
+}
 export default ElCollectionMap;
+

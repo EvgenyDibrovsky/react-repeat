@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const IsOnline = () => {
   const isOnline = false;
   return (
@@ -12,6 +14,10 @@ const IsOnline = () => {
       {/* это рендери одно, а есле НЕ рендери другое     */}
     </div>
   );
+};
+
+IsOnline.propTypes = {
+  isOnline: PropTypes.bool,
 };
 
 export default IsOnline;
