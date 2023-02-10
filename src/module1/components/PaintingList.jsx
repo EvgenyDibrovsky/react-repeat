@@ -8,6 +8,7 @@ const PaintingList = ({ paintings }) => {
       {paintings.map(painting => (
         <li key={painting.id}>
           <Painting
+          //  {...painting} - распыление пропсов = антипатерн 
             imageUrl={painting.url}
             title={painting.title}
             author={painting.author.tag}
