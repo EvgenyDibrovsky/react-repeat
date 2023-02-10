@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import Painting from './Painting';
+import Painting from '../Painting/Painting';
 
 const PaintingList = ({ paintings }) => {
   return (
@@ -8,7 +8,7 @@ const PaintingList = ({ paintings }) => {
       {paintings.map(painting => (
         <li key={painting.id}>
           <Painting
-          //  {...painting} - распыление пропсов = антипатерн 
+            //  {...painting} - распыление пропсов = антипатерн
             imageUrl={painting.url}
             title={painting.title}
             author={painting.author.tag}
