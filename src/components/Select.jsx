@@ -1,8 +1,9 @@
 const Select = () => {
-  const isOnline = true;
+  const isOnline = false;
   return (
     <div>
       {isOnline && 'Онлайн'}
+      {!isOnline && 'Офлайн'}
       {/* Если єто то рендери это */}
 
       {isOnline ? 'Онлайн ' : 'Офлайн'}

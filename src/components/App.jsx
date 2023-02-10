@@ -5,6 +5,7 @@ import paintings from '../data/paintings.json';
 export const App = () => {
   return (
     <div>
+      <h3>№1</h3>
       <Painting
         imageUrl={paintings[0].url}
         title={paintings[0].title}
@@ -38,7 +39,7 @@ export const App = () => {
         price={paintings[3].price}
         quantity={paintings[3].quantity}
       />
-      <h2>Условие рендера</h2>
+      <h3>№2</h3>
       <Select />
     </div>
   );
