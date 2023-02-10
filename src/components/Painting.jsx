@@ -1,4 +1,14 @@
-const Painting = ({ imageUrl, title, profileUrl, author, price, quantity }) => {
+import PropTypes from 'prop-types';
+import defaulImage from './default-image.jpg';
+
+const Painting = ({
+  imageUrl = defaulImage,
+  title,
+  profileUrl,
+  author,
+  price,
+  quantity,
+}) => {
   return (
     <div>
       <img src={imageUrl} alt={title} width="480" />
@@ -11,5 +21,14 @@ const Painting = ({ imageUrl, title, profileUrl, author, price, quantity }) => {
       <button type="button">Добавить в корзину</button>
     </div>
   );
+};
+
+Painting.propTypes = {
+  imageUrl: PropTypes.string,
+  title: PropTypes.string,
+  profileUrl: PropTypes.string,
+  author: PropTypes.string,
+  price: PropTypes.number,
+  quantity: PropTypes.number,
 };
 export default Painting;
