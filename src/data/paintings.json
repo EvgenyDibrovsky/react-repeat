@@ -6,7 +6,7 @@
         "price": 500,
         "author": {
             "tag": "author-1",
-            "utl": "http://www.facebook.com/"
+            "url": "http://www.facebook.com/"
         },
         "quantity": 10
     },
@@ -17,7 +17,7 @@
         "price": 600,
         "author": {
             "tag": "author-1",
-            "utl": "http://www.facebook.com/"
+            "url": "http://www.facebook.com/"
         },
         "quantity": 20
     },
@@ -28,7 +28,7 @@
         "price": 600,
         "author": {
             "tag": "author-1",
-            "utl": "http://www.facebook.com/"
+            "url": "http://www.facebook.com/"
         },
         "quantity": 30
     },
@@ -39,7 +39,7 @@
         "price": 700,
         "author": {
             "tag": "author-1",
-            "utl": "http://www.facebook.com/"
+            "url": "http://www.facebook.com/"
         },
         "quantity": 40
     }
