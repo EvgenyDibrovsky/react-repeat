@@ -5,7 +5,7 @@ const ColorPicker = ({ options }) => {
       <h2 className="ColorPicker__title">ColorPicker</h2>
       <div>
         {options.map(option => {
-          <span className="ColorPicker__option">{option.label}</span>;
+          return <span className="ColorPicker__option">{option.label}</span>;
         })}
       </div>
     </div>
