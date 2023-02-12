@@ -1,0 +1,13 @@
+.section {
+  padding: 60px 0;
+}
+
+.dark {
+  composes: section;
+  background-color: antiquewhite;
+}
+
+.white {
+  composes: section;
+  background-color: white;
+}

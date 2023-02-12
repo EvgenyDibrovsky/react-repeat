@@ -1,24 +1,28 @@
 import PropTypes from 'prop-types';
 
 import Painting from '../Painting/Painting';
+import Container from '../../../components/Container/Container';
 
 const PaintingList = ({ paintings }) => {
   return (
-    <ul>
-      {paintings.map(painting => (
-        <li key={painting.id}>
-          <Painting
-            //  {...painting} - распыление пропсов = антипатерн
-            imageUrl={painting.url}
-            title={painting.title}
-            author={painting.author.tag}
-            profileUrl={painting.author.url}
-            price={painting.price}
-            quantity={painting.quantity}
-          />
-        </li>
-      ))}
-    </ul>
+    <Container>
+      {' '}
+      <ul>
+        {paintings.map(painting => (
+          <li key={painting.id}>
+            <Painting
+              //  {...painting} - распыление пропсов = антипатерн
+              imageUrl={painting.url}
+              title={painting.title}
+              author={painting.author.tag}
+              profileUrl={painting.author.url}
+              price={painting.price}
+              quantity={painting.quantity}
+            />
+          </li>
+        ))}
+      </ul>
+    </Container>
   );
 };
 
