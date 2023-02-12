@@ -4,17 +4,17 @@ const ColorPicker = ({ options }) => {
   return (
     <div className={s.container}>
       <h2 className={s.title}>ColorPicker</h2>
-      <ul>
-        {options.map((option, index) => {
+      <div>
+        {options.map(option => {
           return (
-            <li
-              key={index}
+            <span
+              key={option.color}
               className={s.option}
               style={{ backgroundColor: option.color }}
-            ></li>
+            ></span>
           );
         })}
-      </ul>
+      </div>
     </div>
   );
 };
