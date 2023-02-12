@@ -3,7 +3,8 @@ import PaintingList from './components/PaintingList/PaintingList';
 import IsOnline from './components/IsOnline/IsOnline';
 import ElCollectionMap from './components/ElCollectionMap/ElCollectionMap';
 import Section from '../components/Section';
-import ColorPicker from 'module1/components/ColorPcker/ColorPicker';
+import ColorPicker from './components/ColorPcker/ColorPicker';
+import Alert from './components/Alert/Akert';
 
 const colorPickerOption = [
   { label: 'red', color: '#ff0000' },
@@ -24,7 +25,8 @@ const ModuleOne = () => {
         <PaintingList paintings={paintings} />
         <IsOnline />
         <ElCollectionMap />
-        <ColorPicker options={colorPickerOption}/>
+        <ColorPicker options={colorPickerOption} />
+        <Alert />
       </Section>
     </div>
   );
