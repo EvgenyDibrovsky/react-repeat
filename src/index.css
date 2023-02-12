@@ -24,6 +24,7 @@ H1 {
   padding: 10px 15px;
   color: rgb(0, 97, 166);
   text-decoration: underline;
+  margin-bottom: 20px;
 }
 H3 {
   color: rgba(0, 61, 145, 0.744);
@@ -33,11 +34,47 @@ ul,
 li {
   list-style: none;
 }
+button {
+  padding: 0.8em 1.8em;
+  border: 3px solid #005ea1;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #005ea1;
+  cursor: pointer;
+}
 
+button::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #005ea1;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 105%;
+}
+
+button:hover {
+  color: rgb(255, 255, 255);
+}
 
 /* custom box */
 
-.big{
+.big {
   width: 200px;
   height: 200px;
   margin-bottom: 10px;

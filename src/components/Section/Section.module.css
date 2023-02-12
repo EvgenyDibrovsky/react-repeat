@@ -4,10 +4,10 @@
 
 .dark {
   composes: section;
-  background-color: antiquewhite;
+  background-color: rgb(252, 223, 185);
 }
 
 .white {
   composes: section;
-  background-color: white;
+  background-color: rgb(255, 232, 201);
 }
