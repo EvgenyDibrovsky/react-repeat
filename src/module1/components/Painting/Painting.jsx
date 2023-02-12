@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import defaulImage from '../../../assets/image/default-image.jpg';
-
+import s from './Painting.module.css'
 const Painting = ({
   imageUrl = defaulImage,
   title,
@@ -10,7 +10,7 @@ const Painting = ({
   quantity,
 }) => {
   return (
-    <div>
+    <div className={s.container}>
       <img src={imageUrl} alt={title} width="480" />
       <h2>{title}</h2>
       <p>
