@@ -5,6 +5,7 @@ import ElCollectionMap from './components/ElCollectionMap/ElCollectionMap';
 import Section from '../components/Section/Section';
 import ColorPicker from './components/ColorPcker/ColorPicker';
 import Alert from './components/Alert/Akert';
+import Container from '../components/Container/Container';
 
 const colorPickerOption = [
   { label: 'red', color: '#ff0000' },
@@ -22,6 +23,7 @@ const ModuleOne = () => {
   return (
     <div>
       <Section title="Module - 1" type="dark">
+        <Container>
           <PaintingList paintings={paintings} />
           <IsOnline />
           <ElCollectionMap />
@@ -29,6 +31,7 @@ const ModuleOne = () => {
           <Alert text="Все хорошо!" type="success" />
           <Alert text="Предупреждение!" type="warning" />
           <Alert text="Ошибка!" type="error" />
+        </Container>
       </Section>
     </div>
   );
