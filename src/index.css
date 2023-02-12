@@ -33,3 +33,16 @@ ul,
 li {
   list-style: none;
 }
+
+
+/* custom box */
+
+.big{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.red {
+  background-color: red;
+}

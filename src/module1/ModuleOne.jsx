@@ -6,6 +6,7 @@ import Section from '../components/Section/Section';
 import ColorPicker from './components/ColorPcker/ColorPicker';
 import Alert from './components/Alert/Akert';
 import Container from '../components/Container/Container';
+import Box from './components/Box/Box';
 
 const colorPickerOption = [
   { label: 'red', color: '#ff0000' },
@@ -31,6 +32,9 @@ const ModuleOne = () => {
           <Alert text="Все хорошо!" type="success" />
           <Alert text="Предупреждение!" type="warning" />
           <Alert text="Ошибка!" type="error" />
+          <Box type="small" />
+          <Box type="medium" />
+          <Box type="large" classNames="big red" />
         </Container>
       </Section>
     </div>
