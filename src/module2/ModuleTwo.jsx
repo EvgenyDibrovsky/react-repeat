@@ -7,7 +7,7 @@ const ModuleTwo = () => {
     <div>
       <Section title="Модуль 2 События и состояние. Формы" type="white">
         <Container>
-          <Counter />
+          <Counter initialValue={7} />
         </Container>
       </Section>
     </div>
