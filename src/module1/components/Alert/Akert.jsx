@@ -1,14 +1,16 @@
+import PropTypes from 'prop-types';
 import s from './Alert.module.css';
 
-const Alert = ({ text }) => {
+const Alert = ({ text, type }) => {
   return (
-    <p role="alert" className={s.Alert}>
+    <p role="alert" className={s[type]}>
       {text}
     </p>
   );
 };
 
-// Painting.propTypes = {
-
-// };
+Alert.propTypes = {
+  text: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['success', 'warning', 'error']).isRequired,
+};
 export default Alert;

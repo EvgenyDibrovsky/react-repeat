@@ -26,7 +26,9 @@ const ModuleOne = () => {
         <IsOnline />
         <ElCollectionMap />
         <ColorPicker options={colorPickerOption} />
-        <Alert />
+        <Alert text="Все хорошо!" type="success" />
+        <Alert text="Предупреждение!" type="warning" />
+        <Alert text="Ошибка!" type="error" />
       </Section>
     </div>
   );
