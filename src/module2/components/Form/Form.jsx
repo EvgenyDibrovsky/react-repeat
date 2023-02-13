@@ -16,7 +16,12 @@ class Form extends Component {
     event.preventDefault();
     console.log(this.state);
     this.props.onSubmit(this.state);
-    // this.setState({ name: '', surname: '' });
+
+    this.reset();
+  };
+
+  reset = () => {
+    this.setState({ name: '', surname: '' });
   };
 
   render() {

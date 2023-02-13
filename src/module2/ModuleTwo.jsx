@@ -21,7 +21,9 @@ class ModuleTwo extends Component {
     }));
   };
   formSubmitHandler = data => {
-    console.log(data);
+    setTimeout(() => {
+      console.log(data);
+    }, 1000);
   };
   render() {
     const { todos } = this.state;
