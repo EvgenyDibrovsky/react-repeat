@@ -1,0 +1,90 @@
+.formWrapper {
+  width: 600px;
+  background-color: #fff;
+  border: 2px solid #005ea1;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  text-align: center;
+  line-height: 1.3;
+}
+.formLabel {
+  font-size: 1.3rem;
+  display: block;
+}
+.formInput {
+  display: block;
+  width: 500px;
+  margin: 10px auto 20px auto;
+  padding: 15px 10px;
+  font-size: 1.3rem;
+  border: 1px solid #005ea1;
+  border-radius: 4px;
+  outline: none;
+}
+
+.btnForm {
+  --color: #005ea1;
+  --color2: rgb(10, 25, 30);
+  padding: 0.8em 1.75em;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 2px solid #005ea1;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 17px;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  color: #005ea1;
+}
+
+.btnForm::after,
+.btnForm::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: 0.5s ease-out;
+  background-color: #005ea1;
+}
+
+.btnForm::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btnForm:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btnForm:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btnForm:hover {
+  color: #fff;
+}
+
+.btnForm:active {
+  filter: brightness(0.7);
+  transform: scale(0.98);
+}

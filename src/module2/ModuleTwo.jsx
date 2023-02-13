@@ -5,9 +5,10 @@ import Counter from './components/Counter/Counter';
 import ColorPicker from './components/ColorPcker/ColorPicker';
 import TodoList from './components/TodoList/TodoList';
 import initialTodo from '../data/todo.json';
-import initialColorPicker from '../data/colorpicker.json';
+import InitialColorPicker from '../data/colorpicker.json';
+import Form from './components/Form/Form';
 
-const colorPickerOption = initialColorPicker;
+const colorPickerOption = InitialColorPicker;
 
 class ModuleTwo extends Component {
   state = {
@@ -28,7 +29,8 @@ class ModuleTwo extends Component {
           <Container>
             <Counter initialValue={3} />
             <ColorPicker options={colorPickerOption} />
-            <TodoList todos={todos} onDeleteTodo={this.deleteTodo}/>
+            <TodoList todos={todos} onDeleteTodo={this.deleteTodo} />
+            <Form />
           </Container>
         </Section>
       </div>
