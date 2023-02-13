@@ -1,5 +1,14 @@
-.container {
-  padding: 10px;
+.colorpicker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  border: 2px solid #005ea1;
+  padding: 20px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
 }
 .title {
   line-height: 1.3;
@@ -9,18 +18,19 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  margin: 4px;
+  margin: 10px;
   cursor: pointer;
   border: none;
   outline: none;
   transition: transform 250ms linear;
 }
-.option:hover,
+/* .option:hover,
 .option:focus {
   transform: scale(1.1);
-}
+} */
 
 .activeOption {
   transform: scale(1.2);
-  border: 2px solid rgb(78, 78, 78);
+  border: 3px solid #ffffff;
+  box-shadow: 7px 8px 18px -9px rgba(191, 191, 191, 1);
 }

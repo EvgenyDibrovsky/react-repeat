@@ -3,35 +3,40 @@ import React, { Component } from 'react';
 
 class ColorPicker extends Component {
   state = {
-    activeOptionIndex: 1,
+    activeOptionIndex: 0,
+  };
+
+  setActiveIndex = index => {
+    this.setState({ activeOptionIndex: index });
   };
 
   makeOptionClassName = index => {
-    const optionClases = [s.option];
+    const optionClasses = [s.option];
     if (index === this.state.activeOptionIndex) {
-      optionClases.push(s.activeOption);
+      optionClasses.push(s.activeOption);
     }
-    return optionClases.join(' ');
+    return optionClasses.join(' ');
   };
 
   render() {
-    return (
-      <div className={s.container}>
-        <h2 className={s.title}>ColorPicker</h2>
-        <div>
-          {this.props.options.map(({ label, color }, index) => {
-            const optionClassName = this.makeOptionClassName(index);
+    const { label } = this.props.options[this.state.activeOptionIndex];
 
-            return (
-              <button
-                key={label}
-                className={optionClassName}
-                style={{
-                  backgroundColor: color,
-                }}
-              ></button>
-            );
-          })}
+    return (
+      <div className={s.colorpicker}>
+        <h2 className={s.title}>ColorPicker</h2>
+        <p>Выбран цвет: {label}</p>
+        <div>
+          {this.props.options.map(({ label, color }, index) => (
+            <button
+              key={label}
+              className={this.makeOptionClassName(index)}
+              style={{
+                backgroundColor: color,
+                outline: `3px solid ${color}`,
+              }}
+              onClick={() => this.setActiveIndex(index)}
+            ></button>
+          ))}
         </div>
       </div>
     );

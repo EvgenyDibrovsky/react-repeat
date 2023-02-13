@@ -39,6 +39,7 @@ class Counter extends Component {
   render() {
     return (
       <div className={s.counter}>
+        <h2 className={s.title}>Counter</h2>
         <span className={s.value}>{this.state.value}</span>
 
         <div className={s.controls}>
