@@ -1,8 +1,8 @@
 import s from './Counter.module.css';
-import React from 'react';
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-class Counter extends React.Component {
+class Counter extends Component {
   static defaultProps = {
     initialValue: 0,
   };
@@ -42,10 +42,18 @@ class Counter extends React.Component {
         <span className={s.value}>{this.state.value}</span>
 
         <div className={s.controls}>
-          <button type="button" onClick={this.handleDecrement}>
+          <button
+            className={s.btnCounter}
+            type="button"
+            onClick={this.handleDecrement}
+          >
             Уменьшить на 1
           </button>
-          <button type="button" onClick={this.handleIncrement}>
+          <button
+            className={s.btnCounter}
+            type="button"
+            onClick={this.handleIncrement}
+          >
             Увеличить на 1
           </button>
         </div>
