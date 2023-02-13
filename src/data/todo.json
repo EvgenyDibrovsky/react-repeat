@@ -17,7 +17,7 @@
     {
         "id": "id-4",
         "text": "Выучить React",
-        "completed": false
+        "completed": true
     },
     {
         "id": "id-5",

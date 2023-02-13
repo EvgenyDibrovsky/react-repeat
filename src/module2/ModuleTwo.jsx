@@ -13,6 +13,13 @@ class ModuleTwo extends Component {
   state = {
     todos: initialTodo,
   };
+
+  deleteTodo = todoid => {
+    this.setState(prevState => ({
+      todos: prevState.todos.filter(todo => todo.id !== todoid),
+    }));
+  };
+
   render() {
     const { todos } = this.state;
     return (
@@ -21,7 +28,7 @@ class ModuleTwo extends Component {
           <Container>
             <Counter initialValue={3} />
             <ColorPicker options={colorPickerOption} />
-            <TodoList todos={todos} />
+            <TodoList todos={todos} onDeleteTodo={this.deleteTodo}/>
           </Container>
         </Section>
       </div>

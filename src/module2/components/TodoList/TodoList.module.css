@@ -1,17 +1,45 @@
-.todolist {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.todo {
   width: 600px;
+  background-color: #fff;
   border: 2px solid #005ea1;
   padding: 20px;
-  background-color: #fff;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
 }
+.todolist {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.listTitle {
+  text-align: center;
+  line-height: 1.3;
+}
+
+.listCount {
+  font-size: 1.2rem;
+}
+
+.totalCount {
+  margin-left: 15px;
+  font-weight: 700;
+}
+.completedCount{
+  color:rgb(0, 187, 0);
+  margin-left: 15px;
+  font-weight: 700;
+}
+.unCompletedCount{
+  color:rgb(226, 23, 0);
+  margin-left: 15px;
+  font-weight: 700;
+}
 .listItem {
   display: flex;
   justify-content: space-between;
