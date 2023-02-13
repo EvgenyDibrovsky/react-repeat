@@ -20,7 +20,9 @@ class ModuleTwo extends Component {
       todos: prevState.todos.filter(todo => todo.id !== todoid),
     }));
   };
-
+  formSubmitHandler = data => {
+    console.log(data);
+  };
   render() {
     const { todos } = this.state;
     return (
@@ -30,7 +32,7 @@ class ModuleTwo extends Component {
             <Counter initialValue={3} />
             <ColorPicker options={colorPickerOption} />
             <TodoList todos={todos} onDeleteTodo={this.deleteTodo} />
-            <Form />
+            <Form onSubmit={this.formSubmitHandler} />
           </Container>
         </Section>
       </div>

@@ -12,11 +12,18 @@ class Form extends Component {
     this.setState({ [name]: value });
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log(this.state);
+    this.props.onSubmit(this.state);
+    // this.setState({ name: '', surname: '' });
+  };
+
   render() {
     return (
       <div className={s.formWrapper}>
         <h2 className={s.title}>Формы</h2>
-        <form className={s.form}>
+        <form className={s.form} onSubmit={this.handleSubmit}>
           <label className={s.formLabel}>
             Имя
             <input
@@ -39,7 +46,9 @@ class Form extends Component {
               onChange={this.handleChange}
             />
           </label>
-          <button type="submit" className={s.btnForm}>Отправить</button>
+          <button type="submit" className={s.btnForm}>
+            Отправить
+          </button>
         </form>
       </div>
     );
