@@ -37,10 +37,11 @@ class Counter extends Component {
     // this.setState({ value: this.state.value - 1 });
   };
   render() {
+    const { value } = this.state;
     return (
       <div className={s.counter}>
         <h2 className={s.title}>Counter</h2>
-        <span className={s.value}>{this.state.value}</span>
+        <span className={s.value}>{value}</span>
 
         <div className={s.controls}>
           <button
