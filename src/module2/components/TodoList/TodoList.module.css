@@ -1,0 +1,46 @@
+.todolist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  border: 2px solid #005ea1;
+  padding: 20px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 10px;
+  background-color: rgb(241, 241, 241);
+  margin: 5px 0;
+}
+.textList {
+  font-size: 1.3rem;
+  color: #494949;
+}
+
+.todoDelBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 50%;
+  background-color: #fc0202;
+  color: #fff;
+  border: none;
+  transition: background-color 250ms linear;
+}
+.todoDelBtn:hover {
+  background-color: #920000;
+}
