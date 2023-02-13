@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import s from './Form.module.css';
+import shortid from 'shortid';
 
 class Form extends Component {
   state = {
     name: '',
     surname: '',
+    experience: 'jubior',
   };
+  // генерируем уникальные id для input
+  nameInputId = shortid.generate();
+  surnameInputId = shortid.generate();
 
   handleChange = event => {
     const { name, value } = event.currentTarget;
@@ -29,7 +34,7 @@ class Form extends Component {
       <div className={s.formWrapper}>
         <h2 className={s.title}>Формы</h2>
         <form className={s.form} onSubmit={this.handleSubmit}>
-          <label className={s.formLabel}>
+          <label className={s.formLabel} htmlFor={this.nameInputId}>
             Имя
             <input
               name="name"
@@ -38,9 +43,10 @@ class Form extends Component {
               type="text"
               value={this.state.name}
               onChange={this.handleChange}
+              id={this.nameInputId}
             />
           </label>
-          <label className={s.formLabel}>
+          <label className={s.formLabel} htmlFor={this.surnameInputId}>
             Фамилия
             <input
               name="surname"
@@ -49,8 +55,43 @@ class Form extends Component {
               type="text"
               value={this.state.surname}
               onChange={this.handleChange}
+              id={this.surnameInputId}
             />
           </label>
+          <p className={s.titleSelect}>Ваш уровень:</p>
+          <span className={s.btnRadio}>
+            <label>
+              Junior
+              <input
+                type="radio"
+                name="experience"
+                value="junior"
+                onChange={this.handleChange}
+                checked={this.state.experience === 'junior'}
+              />
+            </label>
+            <label>
+              Middle
+              <input
+                type="radio"
+                name="experience"
+                value="middle"
+                onChange={this.handleChange}
+                checked={this.state.experience === 'middle'}
+              />
+            </label>
+            <label>
+              Senior
+              <input
+                type="radio"
+                name="experience"
+                value="senior"
+                onChange={this.handleChange}
+                checked={this.state.experience === 'senior'}
+              />
+            </label>
+          </span>
+
           <button type="submit" className={s.btnForm}>
             Отправить
           </button>

@@ -31,6 +31,24 @@
   border-radius: 4px;
   outline: none;
 }
+.titleSelect {
+  font-size: 1.3rem;
+  color: rgb(53, 53, 53);
+}
+.btnRadio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.btnRadio input[type='radio' i] {
+  margin-left: 5px;
+  width: 15px;
+  height: 15px;
+}
 
 .btnForm {
   --color: #005ea1;
