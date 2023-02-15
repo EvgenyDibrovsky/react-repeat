@@ -43,6 +43,15 @@
   margin-bottom: 20px;
   font-size: 1.3rem;
 }
+.checkboxLabel {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.checkbox {
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+}
 
 .btnRadio input[type='radio' i] {
   margin-left: 5px;

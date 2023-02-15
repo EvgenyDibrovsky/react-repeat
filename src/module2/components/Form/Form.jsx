@@ -7,6 +7,7 @@ class Form extends Component {
     name: '',
     surname: '',
     experience: 'jubior',
+    licence: 'false',
   };
   // генерируем уникальные id для input
   nameInputId = shortid.generate();
@@ -23,6 +24,11 @@ class Form extends Component {
     this.props.onSubmit(this.state);
 
     this.reset();
+  };
+  handleLicenceChange = event => {
+    this.setState({ licence: event.currentTarget.checked });
+
+    console.log(event.currentTarget.checked);
   };
 
   reset = () => {
@@ -92,7 +98,21 @@ class Form extends Component {
             </label>
           </span>
 
-          <button type="submit" className={s.btnForm}>
+          <label className={s.checkboxLabel}>
+            Согласен с условиями
+            <input className={s.checkbox}
+              type="checkbox"
+              name="licence"
+              defaultChecked={this.state.licence}
+              onChange={this.handleLicenceChange}
+            />
+          </label>
+
+          <button
+            type="submit"
+            className={s.btnForm}
+            disabled={!this.state.licence}
+          >
             Отправить
           </button>
         </form>

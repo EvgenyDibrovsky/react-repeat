@@ -1,5 +1,6 @@
 import s from './ColorPicker.module.css';
 import React, { Component } from 'react';
+import classNames from 'classnames';
 
 class ColorPicker extends Component {
   state = {
