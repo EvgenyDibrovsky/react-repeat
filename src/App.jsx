@@ -1,6 +1,8 @@
 import ModuleOne from 'module1/ModuleOne';
 import ModuleTwo from 'module2/ModuleTwo';
 import ModuleThree from 'module3/ModuleThree';
+import moduleFour from 'module3/ModuleThree';
+
 
 export const App = () => {
   return (
@@ -8,6 +10,7 @@ export const App = () => {
       <ModuleOne />
       <ModuleTwo />
       <ModuleThree />
+      <ModuleFour />
     </div>
   );
 };
